@@ -1,3 +1,5 @@
+# Complete code is written in Main folder of this repository all other files are dependencies and support files of the Replit
+
 # C++ Learning Project - Progressive Syntax Exercises
 
 This project contains a comprehensive set of C++ exercises designed to teach fundamental programming concepts progressively, starting from Hello World and advancing to object-oriented programming.
