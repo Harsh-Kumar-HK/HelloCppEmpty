@@ -1,2 +1,41 @@
+modules = ["cpp"]
 [agent]
 expertMode = true
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "C++ Learning Menu"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "cpp_learning_project"
+
+[[workflows.workflow]]
+name = "C++ Learning Menu"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "g++ -std=c++11 -o menu main_menu.cpp && ./menu"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow]]
+name = "cpp_learning_project"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "g++ -std=c++11 -o menu main_menu.cpp && ./menu"
